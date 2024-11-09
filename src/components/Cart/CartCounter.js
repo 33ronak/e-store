@@ -9,7 +9,7 @@ const CartCounter = () => {
                 className="position-absolute top-0 start-100 translate-middle"
                 text="info"
             >
-                0
+                4
             </Badge>
         </>
     )
