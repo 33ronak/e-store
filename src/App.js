@@ -1,5 +1,6 @@
 import React from 'react';
 import Header from './components/Header';
+import Footer from './components/Footer';
 
 import ProductItems from './components/Products/ProductItems';
 
@@ -11,7 +12,7 @@ const App = () => {
       <Header />
       <ProductItems />
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
