@@ -1,5 +1,5 @@
 import React from "react";
-import Cart from "../Cart/Cart";
+import Cart from "./Cart/Cart";
 import { Container, Nav, Navbar, Row , Col} from "react-bootstrap";
 
 const Header = () => {
