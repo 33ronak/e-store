@@ -1,8 +1,6 @@
 import React from "react";
-import DisplayItem from "./DisplayItem";
-
+import Items from "./Item";
 import { Container, Row, Col } from "react-bootstrap";
-
 
 import album1 from "../../assets/album_1-radius.jpg";
 import album2 from "../../assets/album_2-snow-bulb.jpg";
@@ -12,25 +10,25 @@ import album4 from "../../assets/album_4-waves.jpg";
 const ProductItems = () => {
     const productsArr = [
         {
-            id: Math.random() * 10000000,
+            id: 1,
             title: "Radius",
             price: 100,
             image: album1,
         },
         {
-            id: Math.random * 10000000,
+            id: 2,
             title: "Shadows",
             price: 50,
             image: album2,
         },
         {
-            id: Math.random * 10000000,
+            id: 3,
             title: "Tender",
             price: 70,
             image: album3,
         },
         {
-            id: Math.random * 10000000,
+            id: 4,
             title: "Waves",
             price: 100,
             image: album4,
@@ -45,14 +43,18 @@ const ProductItems = () => {
     return (
         <Container className="my-5" fluid="md">
             <p className="display-6 d-flex align-items-center justify-content-center"
-                style={{ height: "100px" }}> Music Albums </p>
+                style={{ height: "100px" }}
+            >
+                Music Albums
+            </p>
 
             {productPairs.map((pair, index) => (
                 <Row className="d-flex justify-content-center" key={index}>
                     {pair.map((product) => (
                         <Col xs={4} key={product.id}>
-                            <DisplayItem
-                                title={product.title}
+                            <Items
+                                id={product.id}
+                                name={product.title}
                                 image={product.image}
                                 price={product.price}
                             />

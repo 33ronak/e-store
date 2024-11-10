@@ -3,17 +3,19 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 
 import ProductItems from './components/Products/ProductItems';
-
-// import Footer from './components/Footer';
+import ItemProvider from './store/ItemProvider';
 
 const App = () => {
   return (
-    <div>
+    <ItemProvider>
+
       <Header />
+
       <ProductItems />
 
       <Footer />
-    </div>
+      
+    </ItemProvider>
   );
 }
 
