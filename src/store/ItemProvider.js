@@ -2,21 +2,28 @@ import React, { useState } from "react";
 import ItemContext from "./item-context";
 
 const ItemProvider = ({ children }) => {
+
     const [cart, setCart] = useState([]);
-
-
+    
 
     const addItemToCart = (item) => {
 
-        const cartCheck = cart.find(product => product.id === item.id);
+        
 
-        if(cartCheck == undefined) {
-            setCart((prevCart) => [...prevCart, item]);
+        const result = cart.filter(product => product.id === item.id).length > 0;
+
+        if (result) {
+            console.log(`Increase Quatity of  ${item.title} `);
+
+            console.log(item);
+            
+
+            
+
         } else {
-            setCart((prevCart) => [...prevCart, { ...item, quantity: item.quantity + 1}]);
-            console.log(item.quantity);
-        }     
-        console.log(cartCheck);
+            const qunatity = 1;
+            setCart((prevCart) => [...prevCart, {...item, qunatity}]);
+        }        
         
     };
 

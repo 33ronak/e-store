@@ -6,14 +6,11 @@ const Items = (props) => {
     
     const { addItemToCart } = useContext(ItemContext);
 
-    let qty = 1;
-
     const addItemObj = {
         id: props.id,
         title: props.name,
         image: props.image,
         price : props.price,
-        quantity: qty,
     }
 
     const addToCartHandler = (event) => {
