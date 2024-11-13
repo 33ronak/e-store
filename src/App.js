@@ -5,6 +5,7 @@ import Homepage from './pages/Home';
 import StorePage from './pages/Store';
 import AboutUsPage from './pages/AoutUs';
 import RootLayout from './pages/Root';
+import ContactUs from './pages/ContactUs';
 
 const router = createBrowserRouter([  
   { 
@@ -13,7 +14,8 @@ const router = createBrowserRouter([
     children: [
       { path: "/", element: <Homepage /> },
       { path: "/store", element: <StorePage /> },
-      { path: "/about", element: <AboutUsPage /> }
+      { path: "/about", element: <AboutUsPage /> },
+      { path: "/contactus", element: <ContactUs /> }
     ]
   }
 ])
